@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo_name{
+    margin: 20px 40px ;
+    display: flex;
+    align-items: center;
+}
+
+.logo_img{
+    width: 120px;
+}
+.school_name{
+    margin: 40px 200px 0px;
+   text-align: center;
+}
+.school_name h1{
+    width: 700px;
+    font-size: 50px;
+    font-weight: 800;
+}
+.school_name p{
+    margin-top: 10px;
+    font-size: 27px;
+}
+.navbar{
+    margin-top: 15px;
+    background-color:rgb(12, 40, 133);
+}
+
+.navbar .nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    padding: 12px 45px;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+
+}
+#login{
+    padding:0px 20px;
+    background:none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+#login option{
+    color: black;
+}
+
+.footer{
+    background-color: #0E6876;
+}
+.footer .end{
+    display: flex;
+    justify-content:space-between;
+    padding: 50px 80px;
+}
+.end i{
+    font-size: 28px;
+}
+.call{
+    text-align: center;
+}
+.call i{
+    margin-bottom: 5px;
+    
+}
+
+.footer .copyright{
+  text-align: center;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 18px;
+}
+.end a{
+    text-decoration: none;  
+}
