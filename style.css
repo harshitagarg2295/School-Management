@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* Name & logo section */
 .logo_name{
     margin: 20px 40px ;
     display: flex;
@@ -26,6 +27,8 @@
     margin-top: 10px;
     font-size: 27px;
 }
+
+/* Navbar Section */
 .navbar{
     margin-top: 15px;
     background-color:rgb(12, 40, 133);
@@ -60,49 +63,62 @@
 #login option{
     color: black;
 }
+.nav li:hover{
+    transform: scale(1.06);
+}
 
 /* Contact Section */
-/* 
-.contact {
+
+.contact-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    background-color: #131516;
 }
 
-.contact_card {
+.card {
+    margin: 100px 0 100px;
     background-color: #161819;
     color: white;
     width: 1092px;
     text-align: center;
     border-radius: 5px;
+    box-shadow: 10px 2px 10px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 
-.contact_card h1 {
+.card h1 {
+    margin: 25px 0 40px;
     color: #A7A49F;
     font-size: 38px;
 }
-.contact_card span{
+
+.contact {
     display: flex;
     justify-content: space-around;
+    color: #A7A49F;
 }
-.contact_card h3{
+
+.contact h3 {
+    color: #2982cc;
     font-size: 25px;
-} */
+    margin-bottom: 30px;
+}
+.contact p{
+    padding: 10px 0px 14px;
+}
 
 /* Footer Section */
 
-.footer{
+.footer-section{
     background-color: #0E6876;
 }
-.footer .links{
+.footer-section .links{
     display: flex;
     justify-content:space-between;
     padding: 50px 80px;
 }
-.links i{
-    font-size: 28px;
-}
+
 .call{
     text-align: center;
 }
@@ -110,13 +126,18 @@
     margin-bottom: 5px;
     
 }
-
-.footer .copyright{
+.links{
+    cursor: pointer;
+}
+.links i{
+    font-size: 28px;
+}
+.links a{
+    text-decoration: none;  
+}
+.footer-section .copyright{
   text-align: center;
   padding-bottom: 10px;
   color: white;
   font-size: 18px;
-}
-.links a{
-    text-decoration: none;  
 }
