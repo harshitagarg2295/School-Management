@@ -1,0 +1,109 @@
+1. Tech Stack Suggestion
+Tumhara goal full-stack development seekhna hai, toh ye stack best rahega:
+
+Frontend: HTML, CSS, JavaScript, Tailwind CSS (ya Bootstrap)
+
+Frontend Framework: React.js (optional, par helpful hoga)
+
+Backend: Node.js + Express.js
+
+Database: MongoDB (NoSQL, easy to use with Mongoose)
+
+Authentication: JWT (JSON Web Tokens) or Auth.js
+
+Hosting: Vercel (frontend), Render/Heroku (backend), MongoDB Atlas (database)
+
+2. Required Pages & Features
+
+Basic Pages:
+
+Home
+
+About School
+
+Contact Us
+
+Gallery (optional)
+
+Courses / Academics info
+
+User Login :
+
+Student Login
+
+Teacher Login
+
+Admin Login (to manage all data)
+
+3. Core Functionalities
+
+For Students: 
+
+View Attendance
+
+View Result
+
+View Fees Status (due/paid)
+
+Pay Fees Online (Razorpay/Stripe integration)
+
+Profile Details
+
+For Teachers:
+
+Mark Daily Attendance (students)
+
+View Own Attendance
+
+Submit Student Result
+
+Check Salary Status
+
+Profile Details
+
+For Admin:
+
+Add/Remove Students & Teachers
+
+View All Records
+
+Update Results, Fees, Salaries
+
+Handle Payments Logs
+
+Dashboard with stats (No. of students, teachers, fees collected, etc.)
+
+4. Database Schema (Rough Idea)
+
+Collections :
+
+Users (for login, both student and teacher, with role field)
+
+Students (details, attendance, result, fees)
+
+Teachers (details, salary, attendance)
+
+Attendance (student & teacher, daily entries)
+
+Results (student-wise subject marks)
+
+Fees (amount, due, payment history)
+
+Salaries (for teachers)
+
+Transactions (payment records)
+
+5. Additional Things:
+
+Admin Dashboard (maybe using chart libraries like Recharts)
+
+Email notifications (e.g. for fees reminders)
+
+PDF Downloads (result, fee receipt)
+
+Mobile Responsiveness
+
+Proper Auth & Role-based access control
+
+
+https://themeforest.net/item/schoolhub-school-management-dashboard-figma-template/52706786

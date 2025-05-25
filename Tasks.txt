@@ -1,0 +1,200 @@
+Starting Date --> 15 May 2025 
+
+
+WEEK 1: UI & Frontend Setup
+
+Day 1: Planning & Wireframing
+
+Finalize features: Student/Teacher/Admin Login, Attendance, Results, Fees, Salaries, Payment
+
+Draw rough layout on paper or Figma
+
+List all pages needed
+
+Day 2: Project Setup
+
+Create folders: frontend & backend
+
+Setup Git repository
+
+Initialize Node.js & install Tailwind CSS in frontend
+
+Day 3: Build Home Page
+
+Responsive header, footer
+
+Hero section with image
+
+About School, Contact Info
+
+Day 4: Login Pages (UI only)
+
+Create 3 login pages (Student, Teacher, Admin)
+
+Tailwind for styling
+
+Day 5: Dashboards UI (Student + Teacher)
+
+Sidebar + top navbar
+
+Placeholder sections: Attendance, Results, Fees
+
+Day 6: Admin Dashboard UI
+
+Admin can view/manage all data
+
+Add dummy stats, buttons, tables
+
+Day 7: Polish & Test Frontend
+
+Make sure all pages are responsive
+
+Navigation working
+
+WEEK 2: Backend + Authentication
+
+Day 8: Setup Express & MongoDB
+
+Setup backend folder with Express.js
+
+Connect MongoDB (local/Atlas)
+
+Install Mongoose
+
+Day 9: Create User Models
+
+Student, Teacher, Admin with role field
+
+Fields: name, email, password, etc.
+
+Day 10: Authentication System
+
+Register/Login APIs
+
+Use JWT tokens
+
+Role-based access setup
+
+Day 11: Login Integration (Frontend + Backend)
+
+Connect login forms to backend
+
+Save token in localStorage
+
+Day 12: Protect Dashboard Routes
+
+Only logged in users can access dashboards
+
+Redirect unauthenticated users
+
+Day 13: Add Student/Teacher Creation (Admin)
+
+Admin can create new student/teacher
+
+Create form + POST route
+
+Day 14: View All Users Table
+
+Admin sees all registered students/teachers
+
+Fetch data from backend
+
+WEEK 3: Core Features (Attendance, Result, Fees)
+
+Day 15: Student Attendance (Backend)
+
+Attendance model: studentId, date, status
+
+API to mark & fetch attendance
+
+Day 16: Student Attendance (Frontend)
+
+Teacher dashboard > mark attendance form
+
+Student dashboard > view own attendance
+
+Day 17: Results (Backend)
+
+Result model: studentId, subject, marks
+
+API to submit and view results
+
+Day 18: Results (Frontend)
+
+Teacher can submit results
+
+Student can view results
+
+Day 19: Student Fees (Backend)
+
+Fees model: studentId, amount, status
+
+API to mark paid/unpaid
+
+Day 20: Student Fees (Frontend)
+
+Admin sets fees
+
+Student views due/paid status
+
+Day 21: Teacher Salary (Backend + Frontend)
+
+Salary model: teacherId, amount, month, status
+
+Teacher can view salary status
+
+WEEK 4: Payments, Final Touches & Hosting
+
+Day 22: Payment Integration Setup
+
+Create Razorpay or Stripe account
+
+Setup test keys
+
+Day 23: Online Fee Payment (Backend)
+
+Payment route: amount, studentId
+
+Razorpay/Stripe checkout API
+
+Day 24: Online Fee Payment (Frontend)
+
+Student clicks Pay Now
+
+Razorpay/Stripe popup opens
+
+Day 25: Payment History (Admin + Student)
+
+Store successful payments in DB
+
+Show receipts or logs
+
+Day 26: Admin Dashboard Charts
+
+Use Recharts or Chart.js
+
+Show total students, fees collected, etc.
+
+Day 27: Final Testing & Debugging
+
+Test all features by role
+
+Fix bugs, validate forms
+
+Day 28: Hosting Frontend
+
+Deploy React/Tailwind frontend to Vercel
+
+Day 29: Hosting Backend
+
+Deploy Express.js backend to Render or Cyclic
+
+Use MongoDB Atlas
+
+Day 30: Final Review & README
+
+Final cleanup
+
+Write README with features & tech stack
+
+Optional: record video demo

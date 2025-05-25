@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Name & logo section */
+.logo_name {
+    margin: 20px 40px;
+    display: flex;
+    align-items: center;
+}
+
+.logo_img {
+    width: 120px;
+}
+
+.school_name {
+    margin: 40px 200px 0px;
+    text-align: center;
+}
+
+.school_name h1 {
+    width: 700px;
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.school_name p {
+    margin-top: 10px;
+    font-size: 27px;
+}
+
+/* Navbar Section */
+.navbar {
+    margin-top: 15px;
+    background-color: rgb(12, 40, 133);
+}
+
+.navbar .nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav li {
+    padding: 12px 45px;
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+
+}
+
+/* Styling Dropdowns */
+.dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+/* Enable transition on the icon */
+.dropdown i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+/* Rotate the icon on hover */
+.dropdown:hover i {
+    transform: rotate(180deg);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(15, 15, 15, 0.9);
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 12px 20px;
+}
+
+.dropdown-menu li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+    /* display: flex; Can also write this instead of display block */
+    display: block;
+}
+
+/* Contact Section */
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131516;
+}
+
+.card {
+    margin: 100px 0 100px;
+    background-color: #161819;
+    color: white;
+    width: 1092px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 10px 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card h1 {
+    margin: 25px 0 40px;
+    color: #A7A49F;
+    font-size: 38px;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    color: #A7A49F;
+}
+
+.contact h3 {
+    color: #2982cc;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+.contact p {
+    padding: 10px 0px 14px;
+}
+
+/* Footer Section */
+
+.footer-section {
+    background-color: #0E6876;
+}
+
+.footer-section .links {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+}
+
+.call {
+    text-align: center;
+}
+
+.call i {
+    margin-bottom: 5px;
+
+}
+
+.links {
+    cursor: pointer;
+}
+
+.links i {
+    font-size: 28px;
+}
+
+.links a {
+    text-decoration: none;
+}
+
+.footer-section .copyright {
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 18px;
+}

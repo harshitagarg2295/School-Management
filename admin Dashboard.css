@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.admin_dash{
+    display: flex;
+}
+.menu-section{
+    width: 20%;
+    height: 100vh;
+    /* background-color: red; */
+    border: 2px solid;
+}
+.main-section{
+    width: 80%;
+    height: 100vh;
+    background-color: blue;
+    border: 2px solid;
+}
+.menu-bar{
+    padding: 30px 40px;
+
+}
+.menu{
+    display: flex;
+}
