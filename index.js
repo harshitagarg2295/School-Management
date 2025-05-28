@@ -3,7 +3,7 @@ const path = require('path');
 const { title } = require('process');
 
 const app = express();
-const port = 3004;
+const port = 3005;
 
 // Set view engine to EJS
 app.set("view engine", "ejs");
@@ -71,6 +71,10 @@ app.get("/student.html", (req, res) => {
 
 app.get("/contactUs.html", (req, res) => {
     res.render("contactUs");
+});
+
+app.get("/adminDashboard.html", (req, res) => {
+    res.render("adminDashboard");
 });
 
 app.listen(port, () => {
