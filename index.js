@@ -1,6 +1,12 @@
+
 const express = require('express');
 const path = require('path');
 const { title } = require('process');
+
+
+const mongoose = require('mongoose')
+
+const Teacher = require('./models/Teacher') //imported schema
 
 const app = express();
 const port = 3005;
@@ -20,7 +26,7 @@ app.use(express.static("public"));
 // });
 
 
-// Route to render index.ejs
+// // Route to render index.ejs
 app.get("/", (req, res) => {
     res.render("index");  // This will render templates/index.ejs
 });
@@ -76,6 +82,32 @@ app.get("/contactUs.html", (req, res) => {
 app.get("/adminDashboard.html", (req, res) => {
     res.render("adminDashboard");
 });
+
+
+// MongoDB connect
+
+mongoose.connect('mongodb://localhost:27017/schoolDB', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+}).then(() => console.log("MongoDB connected")).catch(err => console.log(err));
+
+app.get("/teach-menu", async (req, res) => {
+  const teachers = await Teacher.find(); // all teachers
+  res.render("teachers", { teachers });
+});
+
+app.post("/add-teacher", async (req, res) => { //add teacher
+  const teacher = new Teacher({
+    name: req.body.name,
+    subject: req.body.subject,
+    class: req.body.class,
+    address: req.body.address,
+    phone: req.body.phone
+  });
+  await teacher.save();
+  res.redirect("/teach-menu"); // ya jaha dikhana hai
+});
+
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);
