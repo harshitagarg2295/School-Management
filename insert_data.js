@@ -19,20 +19,7 @@ mongoose.connect("mongodb://localhost:27017/schoolDB")
         address: "Ram Nagar Colony",
         phone: "9876543210"
       },
-      {
-        name: "Neha Sharma",
-        subject: "Maths",
-        class: "6,7",
-        address: "Ram Nagar Colony",
-        phone: "9876543210"
-      },
-      {
-        name: "Divya Sharma",
-        subject: "Maths",
-        class: "4,5",
-        address: "Vijay Nagar Colony",
-        phone: "9876543210"
-      }
+
     ]);
     console.log("Data inserted");
     process.exit();
