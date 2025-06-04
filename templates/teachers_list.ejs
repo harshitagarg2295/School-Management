@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teachers</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <link rel="stylesheet" href="adminDashboard.css">
 </head>
 <style>
     body {
@@ -92,53 +92,90 @@
         gap: 10px;
         cursor: pointer;
     }
+
+    .btn {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .add_teach {
+        margin: 10px 5px;
+        padding: 7px 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        outline: none;
+        border: none;
+        background-color: rgb(66, 154, 242);
+        color: white;
+    }
+
+    .teacher-form{
+        display: none;
+        margin: 10px 5px 15px;
+    }
+    .teacher-form input{
+        margin: 5px;
+        text-align: center;
+        padding: 5px 7px;
+        border-radius: 3px;
+        border: 1px solid grey;
+    }
+    .teacher-form button{
+        padding: 5px 10px;
+    }
 </style>
 
 <body>
-    <section class="teachers-section">
 
-        <div class="teachers-page">
+    <div class="admin_dash">
 
-            <div class="headers">
+        <!-- Include sidebar -->
+        <%- include("partials/sidebar") %>
 
-                <h1>All Teachers List</h1>
-                <div class="search-teach">
-                    <i class="fa fa-search"></i>
-                    <input type="text" placeholder="Search by Name">
-                </div>
-            </div>
+            <section class="teachers-section">
 
-            <div class="teachers-header">
-                <ul>
-                    <div class="header-checkbox"></div>
-                    <li>Teacher Name</li>
-                    <li>Subject</li>
-                    <li>Class(es)</li>
-                    <li>Address</li>
-                    <li>Phone Number</li>
-                    <li>Action</li>
-                </ul>
-                <hr>
-            </div>
-            
-            <!-- Add this somewhere above the teacher list -->
-<button onclick="document.querySelector('.teacher-form').style.display='block'">
-  Add Teacher
-</button>
+                <div class="teachers-page">
 
-<!-- Hidden Form -->
-<form class="teacher-form" action="/add-teacher" method="POST" style="display:none; margin-top: 20px;">
-  <input type="text" name="name" placeholder="Name" required>
-  <input type="text" name="subject" placeholder="Subject" required>
-  <input type="text" name="classes" placeholder="Classes (comma-separated)" required>
-  <input type="text" name="address" placeholder="Address" required>
-  <input type="text" name="phone" placeholder="Phone Number" required>
-  <button type="submit">Save</button>
-</form>
+                    <div class="headers">
 
-            <div class="teacher-list">
+                        <h1>All Teachers List</h1>
+                        <div class="search-teach">
+                            <i class="fa fa-search"></i>
+                            <input type="text" placeholder="Search by Name">
+                        </div>
+                    </div>
 
-                <!-- <div class="list">
+                    <div class="teachers-header">
+                        <ul>
+                            <div class="header-checkbox"></div>
+                            <li>Teacher Name</li>
+                            <li>Subject</li>
+                            <li>Class(es)</li>
+                            <li>Address</li>
+                            <li>Phone Number</li>
+                            <li>Action</li>
+                        </ul>
+                        <hr>
+                    </div>
+
+                    <div class="btn">
+                        <button class="add_teach">Add Teacher</button>
+                    </div>
+
+                    <!-- Hidden Form -->
+                    <form class="teacher-form" action="/add-teacher" method="POST">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="text" name="subject" placeholder="Subject" required>
+                        <input type="text" name="class" placeholder="Classes (comma-separated)" required>
+                        <input type="text" name="address" placeholder="Address" required>
+                        <input type="text" name="phone" placeholder="Phone Number" required>
+                        <button type="submit">Save</button>
+                    </form>
+
+                    <div class="teacher-list">
+
+                        <!-- <div class="list"> // Example list for styling
                     <div class="checkbox"></div>
                     <div class="name">Harshita Garg</div>
                     <div class="subject">Science</div>
@@ -151,53 +188,49 @@
                         <i class="fa-solid fa-ellipsis"></i>
                     </div>
                 </div>
-                <hr>
-
-                <div class="list">
-                    <div class="checkbox"></div>
-                    <div class="name">Harshita Garg</div>
-                    <div class="subject">Home Science</div>
-                    <div class="class">7,8</div>
-                    <div class="address">Madhopura goli no. 6</div>
-                    <div class="number">9826230803</div>
-                    <div class="icons">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                        <i class="fa-solid fa-trash"></i>
-                        <i class="fa-solid fa-ellipsis"></i>
-                    </div>
-                </div>
                 <hr> -->
-                <% teachers.forEach((teacher)=> { %>
-                    <div class="list">
-                        <div class="checkbox"></div>
-                        <div class="name">
-                            <%= teacher.name %>
-                        </div>
-                        <div class="subject">
-                            <%= teacher.subject %>
-                        </div>
-                        <div class="class">
-                            <%= teacher.class %>
-                        </div>
-                        <div class="address">
-                            <%= teacher.address %>
-                        </div>
-                        <div class="number">
-                            <%= teacher.phone %>
-                        </div>
-                        <div class="icons">
-                            <i class="fa-solid fa-pen-to-square"></i>
-                            <i class="fa-solid fa-trash"></i>
-                            <i class="fa-solid fa-ellipsis"></i>
-                        </div>
+
+                        <% teachers.forEach((teacher)=> { %>
+                            <div class="list">
+                                <div class="checkbox"></div>
+                                <div class="name">
+                                    <%= teacher.name %>
+                                </div>
+                                <div class="subject">
+                                    <%= teacher.subject %>
+                                </div>
+                                <div class="class">
+                                    <%= teacher.class %>
+                                </div>
+                                <div class="address">
+                                    <%= teacher.address %>
+                                </div>
+                                <div class="number">
+                                    <%= teacher.phone %>
+                                </div>
+                                <div class="icons">
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                    <i class="fa-solid fa-trash"></i>
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </div>
+                            </div>
+                            <hr>
+                            <% }) %>
+
                     </div>
-                    <hr>
-                    <% }) %>
 
-            </div>
+                </div>
+            </section>
+    </div>
 
-        </div>
-    </section>
+    <script>
+
+        let btn = document.querySelector(".add_teach");
+
+        btn.addEventListener("click", () => {
+            document.querySelector(".teacher-form").style.display = 'block';
+        });
+    </script>
 </body>
 
 </html>
