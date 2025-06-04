@@ -10,5 +10,5 @@ const teacherSchema = new mongoose.Schema({
     address: String,
     phone: Number,
 });
-module.exports = mongoose.model('Teacher', teacherSchema);
+module.exports = mongoose.model('TeacherSchema', teacherSchema);
 
