@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const { title } = require('process');
+const bodyParser = require("body-parser");
 
 
 const mongoose = require('mongoose')
@@ -19,6 +20,9 @@ app.set("views", path.join(__dirname, "templates"));
 
 //Serve static files (CSS, images, JS, etc.) from public folder
 app.use(express.static("public"));
+
+// Yeh middleware Express ko allow karta hai HTML form ke data ko req.body me read karne ke liye.
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Serve index.html from templates
 // app.get('/', (req, res) => {
@@ -93,7 +97,7 @@ mongoose.connect('mongodb://localhost:27017/schoolDB', {
 
 app.get("/teach-menu", async (req, res) => {
   const teachers = await Teacher.find(); // all teachers
-  res.render("teachers", { teachers });
+  res.render("teachers_list", { teachers });
 });
 
 app.post("/add-teacher", async (req, res) => { //add teacher
@@ -105,7 +109,7 @@ app.post("/add-teacher", async (req, res) => { //add teacher
     phone: req.body.phone
   });
   await teacher.save();
-  res.redirect("/teach-menu"); // ya jaha dikhana hai
+  res.redirect("/teach-menu");
 });
 
 
